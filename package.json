@@ -1,0 +1,28 @@
+{
+  "name": "all-markets",
+  "version": "1.0.0",
+  "description": "All Market",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nms": "npx nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "Akash Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "socket.io": "^4.4.1",
+    "socketio-file-upload": "^0.7.3"
+  },
+  "engines": {
+    "node": "17.4.0",
+    "npm": "8.3.1"
+  }
+}
