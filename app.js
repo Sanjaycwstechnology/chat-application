@@ -30,16 +30,16 @@ app.get('/', function(req, res){
 });
 
 // //MYSQL Connection Local
-const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'market',
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0,
-    timezone: '+05:30'
-  });
+// const pool = mysql.createPool({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     database: 'market',
+//     waitForConnections: true,
+//     connectionLimit: 10,
+//     queueLimit: 0,
+//     timezone: '+05:30'
+//   });
 // //MYSQL Connection Local End
 
 
@@ -57,16 +57,16 @@ const pool = mysql.createPool({
 //MYSQL Connection End
 
 //MYSQL Connection Production
-//  const pool = mysql.createPool({
-//     host: 'all-markets-production.cgt6kyhcvyth.us-east-1.rds.amazonaws.com',
-//     user: 'admin',
-//     password: 'KZuUMHvOx3Gg2n1',
-//     database: 'all_market_prod',
-//     waitForConnections: true,
-//     connectionLimit: 10,
-//     queueLimit: 0,
-//     timezone: '+05:30'
-//   });
+ const pool = mysql.createPool({
+    host: 'all-markets-production.cgt6kyhcvyth.us-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'KZuUMHvOx3Gg2n1',
+    database: 'all_market_prod',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0,
+    timezone: '+05:30'
+  });
 //MYSQL Connection End
 
 io.of(/^\/\w+$/).on('connection', (socket)=>{
